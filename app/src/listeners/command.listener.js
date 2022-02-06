@@ -8,11 +8,12 @@ const { dropDowndata } = require("../../helpers/slashCommandData");
 //   };
 const MessageListener = new ListenerFactory(
   app,
-  command,
+  'command',
   "/bot",
   async ({ body, ack, say }) => {
     await ack();
     await say(dropDowndata);
   }
 );
-MessageListener.listen();
+
+module.exports = MessageListener;

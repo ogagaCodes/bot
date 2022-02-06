@@ -1,12 +1,12 @@
 exports.ListenerFactory = class {
-  constructor(app, event, name, callBack) {
+  constructor(app, eventData,  name, callBack) {
     this.app = app;
-    this.event = event;
+    this.eventData = eventData;
     this.name = name;
-    this.calBack = -callBack;
+    this.callBack = -callBack;
   }
 
   listen() {
-    return this.app.event(this.name, this.callBack);
+    return this.app[this.eventData](this.name, this.callBack);
   }
 };
