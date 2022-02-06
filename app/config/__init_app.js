@@ -3,7 +3,7 @@ const { KEYS } = require('../constants/keys');
 
 exports.app = new App({
   signingSecret: KEYS.SIGNING_SECRET,
-  socketMode: true,
+//   socketMode: true,
   token: KEYS.OAUTH_TOKEN,
-  appToken:KEYS.APPTOKEN
+//   appToken:KEYS.APPTOKEN
 });
